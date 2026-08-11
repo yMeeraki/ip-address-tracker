@@ -9,15 +9,15 @@ fetch(`${baseURL}?apiKey=${API_KEY}&ipAddress=${ipAddress}`, { method: "GET" })
 
 function showDetails(data) {
   // ip address
-  console.log(data.ip);
+  document.getElementById("ip-address").textContent = `${data.ip}`;
 
   //  location
-  console.log(data.location.region);
-  console.log(data.location.country);
+  document.getElementById("region").textContent = `${data.location.region}`;
+  document.getElementById("country").textContent = `${data.location.country}`;
 
   //   timezone
-  console.log(data.location.timezone);
+  document.getElementById("timezone").textContent = `${data.location.timezone}`;
 
   //   isp
-  console.log(data.isp);
+  document.getElementById("isp").textContent = `${data.isp}`;
 }
