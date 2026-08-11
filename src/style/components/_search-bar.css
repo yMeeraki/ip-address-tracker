@@ -1,0 +1,28 @@
+form {
+  height: 3.625em;
+  display: flex;
+}
+
+input {
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border: none;
+
+  width: 80%;
+  background: var(--white-color);
+
+  padding-left: 1.5em;
+}
+
+button {
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  border: none;
+
+  width: 20%;
+  background: var(--black-color);
+}
+
+i {
+  color: var(--white-color);
+}
