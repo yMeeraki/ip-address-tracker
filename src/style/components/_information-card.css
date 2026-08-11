@@ -1,3 +1,16 @@
-.information-card{
-    
+.information-card {
+}
+
+h6 {
+  font-size: var(--information-label-size);
+  font-weight: var(--information-weight);
+  letter-spacing: var(--information-letter-spacing);
+  color: var(--information-label-color);
+  text-transform: uppercase;
+}
+
+p {
+  font-size: var(--information-values-size);
+  font-weight: var(--information-weight);
+  color: var(--information-values-color);
 }

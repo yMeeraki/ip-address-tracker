@@ -1,6 +1,4 @@
 :root {
-  --gray-400: hsl(0, 0%, 58%);
-
   --white-color: hsl(0, 0%, 98%);
   --black-color: hsl(0, 0%, 10%);
 
@@ -17,7 +15,13 @@
   --ip-input-weight: 400;
   --ip-input-color: hsl(0, 0%, 17%);
 
-  /* Information Card */
-  
-}
+  /* Information Labels */
+  --information-label-size: 0.625rem;
+  --information-weight: 700;
+  --information-letter-spacing: 0.125em;
+  --information-label-color: hsl(0, 0%, 58%);
 
+  /* Information Values */
+  --information-values-size: 1.25rem;
+  --information-values-color: hsl(0, 0%, 17%);
+}
