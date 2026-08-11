@@ -26,3 +26,9 @@ button {
 i {
   color: var(--white-color);
 }
+
+input[type="text"] {
+  font-size: var(--ip-input-size);
+  font-weight: var(--ip-input-weight);
+  color: var(--ip-input-color);
+}
