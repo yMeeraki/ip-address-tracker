@@ -1,8 +1,12 @@
 header {
   background: url("/images/pattern-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
   padding: 2em 1em;
 
-  height: 30vh;
+  height: 45vh;
 
   display: flex;
   flex-direction: column;
