@@ -1,13 +1,18 @@
-header{
-    background: url('/images/pattern-bg-mobile.png');
-    color: var(--white-color);
-    padding: 2em 1em;
+header {
+  background: url("/images/pattern-bg-mobile.png");
+  padding: 2em 1em;
 
-    height: 30vh;
+  height: 30vh;
 
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 
-    gap: 1.5em;
+  gap: 1.5em;
+}
+
+h1 {
+  font-size: var(--main-heading-size);
+  font-weight: var(--main-heading-weight);
+  color: var(--white-color);
 }

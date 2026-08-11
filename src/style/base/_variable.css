@@ -5,11 +5,12 @@
   --white-color: hsl(0, 0%, 98%);
   --black-color: hsl(0, 0%, 10%);
 
+  /* Typography hierarchy */
   --font-family: "Rubik", sans-serif;
 
-  --text-input: 1.125rem;
+  /* Main Heading */
+  --main-heading-size: clamp(1.5rem, 5vw, 2rem);
+  --main-heading-weight: 700;
 }
 
-h1 {
-  font-size: var(--text-input);
-}
+
