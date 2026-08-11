@@ -1,12 +1,17 @@
 .information-card {
   position: absolute;
+  z-index: 2;
   top: 10em;
-  left: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: calc(100% - 48px);
+  max-width: 327px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em 0;
-  padding: 1.75em;
-  width: 288px;
+  padding: 1em;
+
   background: var(--white-color);
   border-radius: 1em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

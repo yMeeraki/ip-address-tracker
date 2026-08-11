@@ -1,6 +1,6 @@
 const API_KEY = import.meta.env.VITE_API_KEY;
 
-const baseURL = "https://geo.ipify.org/api/v2/country";
+const baseURL = "https://geo.ipify.org/api/v2/country,city";
 const ipAddress = "8.8.8.8";
 
 fetch(`${baseURL}?apiKey=${API_KEY}&ipAddress=${ipAddress}`, { method: "GET" })
@@ -8,10 +8,12 @@ fetch(`${baseURL}?apiKey=${API_KEY}&ipAddress=${ipAddress}`, { method: "GET" })
   .then((data) => showDetails(data));
 
 function showDetails(data) {
+  console.log(data);
   // ip address
   document.getElementById("ip-address").textContent = `${data.ip}`;
 
   //  location
+  document.getElementById("city").textContent = `${data.location.city}`;
   document.getElementById("region").textContent = `${data.location.region}`;
   document.getElementById("country").textContent = `${data.location.country}`;
 
@@ -20,4 +22,12 @@ function showDetails(data) {
 
   //   isp
   document.getElementById("isp").textContent = `${data.isp}`;
+
+  // map
+  const map = L.map("map").setView([data.location.lat, data.location.lng], 13);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; OpenStreetMap contributors",
+  }).addTo(map);
+
+  L.marker([data.location.lat, data.location.lng]).addTo(map);
 }

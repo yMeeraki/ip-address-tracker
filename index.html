@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
+    <!--  Leaflet's CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!--  Leaflet's Script -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <link
       rel="icon"
       type="image/png"
@@ -38,7 +52,10 @@
       </div>
       <div>
         <h6>Location</h6>
-        <p><span id="region">Region</span>, <span id="country">Country</span></p>
+        <p>
+          <span id="city">City</span>, <span id="region">Region</span>,
+          <span id="country">Country</span>
+        </p>
       </div>
       <div>
         <h6>Timezone</h6>
@@ -49,7 +66,7 @@
         <p id="isp">ISP</p>
       </div>
     </section>
-    <main></main>
+    <main id="map"></main>
   </body>
   <script type="module" src="index.js"></script>
 </html>
