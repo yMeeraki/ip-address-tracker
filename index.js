@@ -5,4 +5,19 @@ const ipAddress = "8.8.8.8";
 
 fetch(`${baseURL}?apiKey=${API_KEY}&ipAddress=${ipAddress}`, { method: "GET" })
   .then((response) => response.json())
-  .then((data) => console.log(data));
+  .then((data) => showDetails(data));
+
+function showDetails(data) {
+  // ip address
+  console.log(data.ip);
+
+  //  location
+  console.log(data.location.region);
+  console.log(data.location.country);
+
+  //   timezone
+  console.log(data.location.timezone);
+
+  //   isp
+  console.log(data.isp);
+}
