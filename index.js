@@ -16,8 +16,10 @@ function getLocation(e) {
   document.getElementById("ip-address-input").value = " ";
 }
 
+let map;
+
 function showDetails(data) {
-  console.log(data.location)
+  console.log(data.location);
   // ip address
   document.getElementById("ip-address").textContent = `${data.ip}`;
 
@@ -32,11 +34,22 @@ function showDetails(data) {
   //   isp
   document.getElementById("isp").textContent = `${data.isp}`;
 
-  // map
-  let map = L.map("map").setView([data.location.lat, data.location.lng], 13);
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "&copy; OpenStreetMap contributors",
-  }).addTo(map);
+  // Coordinates
+  const lat = data.location.lat;
+  const lng = data.location.lng;
 
-  L.marker([data.location.lat, data.location.lng]).addTo(map);
+  // Create map only once
+  if (!map) {
+    map = L.map("map").setView([lat, lng], 13);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "© OpenStreetMap contributors",
+    }).addTo(map);
+  } else {
+    // Move existing map
+    map.setView([lat, lng], 13);
+  }
+
+  // Add marker
+  L.marker([lat, lng]).addTo(map);
 }
