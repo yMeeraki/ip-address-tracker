@@ -20,6 +20,10 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.information-card div {
+text-align: center;
+}
+
 @media (min-width: 600px) {
   .information-card {
     top: 35%;
@@ -29,7 +33,12 @@
 
     padding: 2em;
   }
+
+  .information-card div {
+  text-align: left;
+  }
 }
+
 
 h6 {
   font-size: var(--information-label-size);
@@ -37,12 +46,10 @@ h6 {
   letter-spacing: var(--information-letter-spacing);
   color: var(--information-label-color);
   text-transform: uppercase;
-  text-align: center;
 }
 
 p {
   font-size: var(--information-values-size);
   font-weight: var(--information-weight);
   color: var(--information-values-color);
-  text-align: center;
 }
