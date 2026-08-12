@@ -21,24 +21,29 @@
 }
 
 .information-card div {
-text-align: center;
+  text-align: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
   .information-card {
     top: 35%;
 
     grid-template-columns: repeat(4, 1fr);
-    gap: 0 1em;
 
-    padding: 2em;
+    padding: 1em;
   }
 
   .information-card div {
-  text-align: left;
+    padding: 1em;
+    text-align: left;
+  }
+
+  .information-card div:nth-child(2),
+  .information-card div:nth-child(3),
+  .information-card div:nth-child(4) {
+    border-left: 2px solid var(--border-color);
   }
 }
-
 
 h6 {
   font-size: var(--information-label-size);
@@ -46,6 +51,7 @@ h6 {
   letter-spacing: var(--information-letter-spacing);
   color: var(--information-label-color);
   text-transform: uppercase;
+  margin-bottom: 1em;
 }
 
 p {

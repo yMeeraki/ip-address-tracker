@@ -1,6 +1,7 @@
 :root {
   --white-color: hsl(0, 0%, 98%);
   --black-color: hsl(0, 0%, 10%);
+  --border-color: hsl(0, 0%, 78%);
 
   /* ========================================================================== */
   /* Typography hierarchy */
