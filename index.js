@@ -1,14 +1,19 @@
-const API_KEY = import.meta.env.VITE_API_KEY;
+document.getElementById("get-location").addEventListener("submit", getLocation);
 
-const baseURL = "https://geo.ipify.org/api/v2/country,city";
-const ipAddress = "8.8.8.8";
+function getLocation(e) {
+  e.preventDefault();
+  const API_KEY = import.meta.env.VITE_API_KEY;
 
-fetch(`${baseURL}?apiKey=${API_KEY}&ipAddress=${ipAddress}`, { method: "GET" })
-  .then((response) => response.json())
-  .then((data) => showDetails(data));
+  const baseURL = "https://geo.ipify.org/api/v2/country,city";
+  const ipAddress = document.getElementById("ip-address-input").value;
+  fetch(`${baseURL}?apiKey=${API_KEY}&ipAddress=${ipAddress}`, {
+    method: "GET",
+  })
+    .then((response) => response.json())
+    .then((data) => showDetails(data));
+}
 
 function showDetails(data) {
-  console.log(data);
   // ip address
   document.getElementById("ip-address").textContent = `${data.ip}`;
 
@@ -23,15 +28,11 @@ function showDetails(data) {
   //   isp
   document.getElementById("isp").textContent = `${data.isp}`;
 
-  getMapAPI(data.location.lat, data.location.lng);
-}
-
-function getMapAPI(lat, lng) {
   // map
-  const map = L.map("map").setView([lat, lng], 13);
+  const map = L.map("map").setView([data.location.lat, data.location.lng], 13);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
 
-  L.marker([lat, lng]).addTo(map);
+  L.marker([data.location.lat, data.location.lng]).addTo(map);
 }
