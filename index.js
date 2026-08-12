@@ -17,6 +17,7 @@ function getLocation(e) {
 }
 
 function showDetails(data) {
+  console.log(data.location)
   // ip address
   document.getElementById("ip-address").textContent = `${data.ip}`;
 
@@ -32,7 +33,7 @@ function showDetails(data) {
   document.getElementById("isp").textContent = `${data.isp}`;
 
   // map
-  const map = L.map("map").setView([data.location.lat, data.location.lng], 13);
+  let map = L.map("map").setView([data.location.lat, data.location.lng], 13);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
