@@ -3,16 +3,22 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  
+  background-attachment: fixed;
+
   padding: 2em 1em;
 
   height: 45vh;
 
   display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-content: start;
+  align-items: center;
 
   gap: 1.5em;
+}
+
+@media (min-width:600px) {
+  
 }
 
 h1 {

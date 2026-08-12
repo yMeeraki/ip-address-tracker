@@ -1,6 +1,9 @@
 form {
   height: 3.625em;
+  max-width: 425px;
+  width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 input {
