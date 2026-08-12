@@ -19,7 +19,6 @@ function getLocation(e) {
 let map;
 
 function showDetails(data) {
-  console.log(data.location);
   // ip address
   document.getElementById("ip-address").textContent = `${data.ip}`;
 
