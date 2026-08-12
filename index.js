@@ -23,11 +23,15 @@ function showDetails(data) {
   //   isp
   document.getElementById("isp").textContent = `${data.isp}`;
 
+  getMapAPI(data.location.lat, data.location.lng);
+}
+
+function getMapAPI(lat, lng) {
   // map
-  const map = L.map("map").setView([data.location.lat, data.location.lng], 13);
+  const map = L.map("map").setView([lat, lng], 13);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
 
-  L.marker([data.location.lat, data.location.lng]).addTo(map);
+  L.marker([lat, lng]).addTo(map);
 }
