@@ -1,8 +1,12 @@
 :root {
   --white-color: hsl(0, 0%, 98%);
   --black-color: hsl(0, 0%, 10%);
+  
   --border-color: hsl(0, 0%, 78%);
 
+  --black-btn:hsl(0, 0%, 10%);
+  --hover-btn: hsl(0, 0%, 17%);
+  
   /* ========================================================================== */
   /* Typography hierarchy */
   --font-family: "Rubik", sans-serif;

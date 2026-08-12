@@ -8,3 +8,5 @@
 
 @import "./src/style/components/_search-bar.css";
 @import "./src/style/components/_information-card.css";
+
+@import "./src/style/state/_hover.css";

@@ -23,7 +23,8 @@ button {
   border: none;
 
   width: 20%;
-  background: var(--black-color);
+  background: var(--black-btn);
+  cursor: pointer;
 }
 
 i {
@@ -34,4 +35,5 @@ input[type="text"] {
   font-size: var(--ip-input-size);
   font-weight: var(--ip-input-weight);
   color: var(--ip-input-color);
+  cursor: pointer;
 }
