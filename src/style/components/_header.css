@@ -1,5 +1,5 @@
 header {
-  background: url("/images/pattern-bg-mobile.png");
+  background: url("/images/pattern-bg-mobile.webp");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -19,7 +19,7 @@ header {
 
 @media (min-width: 600px) {
   header {
-    background: url("/images/pattern-bg-desktop.png");
+    background: url("/images/pattern-bg-desktop.webp");
     background-repeat: no-repeat;
     background-size: cover;
   }
