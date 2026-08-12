@@ -17,7 +17,7 @@ header {
   gap: 1.5em;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 600px) {
   header {
     background: url("/images/pattern-bg-desktop.png");
     background-repeat: no-repeat;
