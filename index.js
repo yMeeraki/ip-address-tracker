@@ -38,6 +38,4 @@ function showDetails(data) {
   }).addTo(map);
 
   L.marker([data.location.lat, data.location.lng]).addTo(map);
-
-  //
 }
