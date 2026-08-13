@@ -5,7 +5,7 @@ function getLocation(e) {
 
   const API_KEY = import.meta.env.VITE_API_KEY;
   const baseURL = "https://geo.ipify.org/api/v2/country,city";
-  const ipAddress = document.getElementById("ip-address-input").value;
+  const ipAddress = document.getElementById("ip-address-input").value.trim();
 
   fetch(`${baseURL}?apiKey=${API_KEY}&ipAddress=${ipAddress}`, {
     method: "GET",
@@ -13,7 +13,7 @@ function getLocation(e) {
     .then((response) => response.json())
     .then((data) => showDetails(data));
 
-  document.getElementById("ip-address-input").value = " ";
+  document.getElementById("ip-address-input").value = "";
 }
 
 let map;
