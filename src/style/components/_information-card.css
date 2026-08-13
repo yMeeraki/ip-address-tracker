@@ -45,7 +45,7 @@
   }
 }
 
-h6 {
+h2 {
   font-size: var(--information-label-size);
   font-weight: var(--information-weight);
   letter-spacing: var(--information-letter-spacing);
